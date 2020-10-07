@@ -10,13 +10,35 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    var countOfWin = 0
+    var countOfLose = 0
+    
+    
+    @IBOutlet weak var winButton: UIButton!
+    @IBOutlet weak var loseButton: UIButton!
+    @IBOutlet weak var totalWinLabel: UILabel!
+    @IBOutlet weak var totalLoseLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    
 
+    @IBAction func pressedWin(_ sender: Any) {
+        countOfWin += 1
+        totalWinLabel.text = "Total Win: \(countOfWin)"
+    }
+    
+    
+    @IBAction func pressedLose(_ sender: Any) {
+        countOfLose += 1
+        totalLoseLabel.text = "Total Lose: \(countOfLose)"
+    }
+    
     /*
     // MARK: - Navigation
 

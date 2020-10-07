@@ -22,6 +22,9 @@
                                 <state key="normal" title="Win">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressedWin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ypo-KN-2lg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7j-Yt-Fmp">
                                 <rect key="frame" x="95" y="480" width="224" height="70"/>
@@ -30,6 +33,9 @@
                                 <state key="normal" title="Lose">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressedLose:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XpE-fl-UlN"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total Win: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qtX-iP-4GS">
                                 <rect key="frame" x="140" y="624" width="135" height="37"/>
@@ -62,6 +68,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="7FO-gp-6y6"/>
+                    <connections>
+                        <outlet property="loseButton" destination="o7j-Yt-Fmp" id="Ojq-7x-UQj"/>
+                        <outlet property="totalLoseLabel" destination="rgO-Sn-HQk" id="UTX-Lq-E5Q"/>
+                        <outlet property="totalWinLabel" destination="qtX-iP-4GS" id="GPC-4U-f6C"/>
+                        <outlet property="winButton" destination="KoK-VT-YES" id="CHs-GJ-P7K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
