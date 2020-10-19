@@ -91,7 +91,13 @@
                             <constraint firstItem="rgO-Sn-HQk" firstAttribute="top" secondItem="qtX-iP-4GS" secondAttribute="bottom" constant="25" id="w9r-uj-UwM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Scoreboard" id="7FO-gp-6y6"/>
+                    <navigationItem key="navigationItem" title="Scoreboard" id="7FO-gp-6y6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="EWr-if-Dh1">
+                            <connections>
+                                <segue destination="Req-RK-D6u" kind="show" identifier="toEditVC" id="Vdn-KP-vLa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="gameNumberLabel" destination="Qf9-SG-97c" id="w9O-mQ-vjP"/>
                         <outlet property="loseButton" destination="o7j-Yt-Fmp" id="Ojq-7x-UQj"/>
@@ -103,6 +109,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--EditVC-->
+        <scene sceneID="dYc-Jv-k4I">
+            <objects>
+                <viewController id="Req-RK-D6u" customClass="EditVC" customModule="PerformTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o6F-sl-Qvu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of Game:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CON-Js-H32">
+                                <rect key="frame" x="64" y="150" width="289" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Total Win:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6UC-zY-ydM">
+                                <rect key="frame" x="64" y="224" width="289" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Total Lose" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iI2-VH-qrW">
+                                <rect key="frame" x="64" y="294" width="289" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pb6-FP-JE4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CON-Js-H32" firstAttribute="leading" secondItem="6UC-zY-ydM" secondAttribute="leading" id="0Ls-HN-U4I"/>
+                            <constraint firstItem="CON-Js-H32" firstAttribute="trailing" secondItem="6UC-zY-ydM" secondAttribute="trailing" id="7Q8-cx-1qR"/>
+                            <constraint firstItem="6UC-zY-ydM" firstAttribute="trailing" secondItem="iI2-VH-qrW" secondAttribute="trailing" id="RVQ-MQ-g9b"/>
+                            <constraint firstItem="Pb6-FP-JE4" firstAttribute="trailing" secondItem="CON-Js-H32" secondAttribute="trailing" constant="61" id="Tg6-EM-rbj"/>
+                            <constraint firstItem="6UC-zY-ydM" firstAttribute="leading" secondItem="iI2-VH-qrW" secondAttribute="leading" id="W4g-tu-NnK"/>
+                            <constraint firstItem="CON-Js-H32" firstAttribute="top" secondItem="Pb6-FP-JE4" secondAttribute="top" constant="62" id="guf-4x-e6N"/>
+                            <constraint firstItem="6UC-zY-ydM" firstAttribute="top" secondItem="CON-Js-H32" secondAttribute="bottom" constant="40" id="nMi-BQ-F16"/>
+                            <constraint firstItem="iI2-VH-qrW" firstAttribute="top" secondItem="6UC-zY-ydM" secondAttribute="bottom" constant="36" id="sdQ-kQ-80f"/>
+                            <constraint firstItem="CON-Js-H32" firstAttribute="leading" secondItem="Pb6-FP-JE4" secondAttribute="leading" constant="64" id="zTD-bS-szz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fwH-T3-ghR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p4Z-oq-uAW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1802.8985507246377" y="139.95535714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MyV-6N-q3o">
