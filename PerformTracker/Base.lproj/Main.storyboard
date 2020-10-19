@@ -17,9 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoK-VT-YES">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoK-VT-YES">
                                 <rect key="frame" x="95" y="354" width="224" height="69"/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="0.92717251712328763" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="Ewp-wm-Imo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Win">
                                     <color key="titleColor" systemColor="groupTableViewBackgroundColor"/>
@@ -28,7 +31,7 @@
                                     <action selector="pressedWin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ypo-KN-2lg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7j-Yt-Fmp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7j-Yt-Fmp">
                                 <rect key="frame" x="95" y="480" width="224" height="70"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="0.71743899828767121" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -47,6 +50,18 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total Lose: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgO-Sn-HQk">
                                 <rect key="frame" x="140" y="686" width="135" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="AgQ-4r-l89"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Game :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qf9-SG-97c">
+                                <rect key="frame" x="95" y="220" width="224" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="d1o-LL-NfS"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -55,7 +70,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="qtX-iP-4GS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="4bv-TU-rQ5"/>
                             <constraint firstItem="KoK-VT-YES" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="54W-Wr-FZy"/>
+                            <constraint firstItem="Qf9-SG-97c" firstAttribute="leading" secondItem="KoK-VT-YES" secondAttribute="leading" id="7dS-7f-Y1E"/>
                             <constraint firstItem="o7j-Yt-Fmp" firstAttribute="leading" secondItem="KoK-VT-YES" secondAttribute="leading" id="APR-eS-T0d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KoK-VT-YES" secondAttribute="trailing" constant="95" id="CUY-Ft-iVJ"/>
                             <constraint firstItem="o7j-Yt-Fmp" firstAttribute="top" secondItem="KoK-VT-YES" secondAttribute="bottom" constant="57" id="QUJ-vR-biN"/>
@@ -63,14 +80,20 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rgO-Sn-HQk" secondAttribute="bottom" constant="145" id="TWR-kl-y8H"/>
                             <constraint firstItem="qtX-iP-4GS" firstAttribute="top" secondItem="o7j-Yt-Fmp" secondAttribute="bottom" constant="74" id="XGs-d4-Ey3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="o7j-Yt-Fmp" secondAttribute="bottom" constant="312" id="eXZ-84-E31"/>
+                            <constraint firstItem="KoK-VT-YES" firstAttribute="top" secondItem="Qf9-SG-97c" secondAttribute="bottom" constant="71" id="eYR-0p-gle"/>
+                            <constraint firstItem="qtX-iP-4GS" firstAttribute="leading" secondItem="rgO-Sn-HQk" secondAttribute="leading" id="gx0-6b-RD4"/>
                             <constraint firstItem="rgO-Sn-HQk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kbK-Md-Hkk"/>
+                            <constraint firstItem="Qf9-SG-97c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="132" id="ksH-eg-Phn"/>
                             <constraint firstItem="qtX-iP-4GS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l1s-9f-hi3"/>
                             <constraint firstItem="qtX-iP-4GS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qf1-36-db6"/>
+                            <constraint firstItem="Qf9-SG-97c" firstAttribute="trailing" secondItem="KoK-VT-YES" secondAttribute="trailing" id="sIf-fX-GxG"/>
                             <constraint firstItem="KoK-VT-YES" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sMc-I8-e7g"/>
+                            <constraint firstItem="rgO-Sn-HQk" firstAttribute="top" secondItem="qtX-iP-4GS" secondAttribute="bottom" constant="25" id="w9r-uj-UwM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Scoreboard" id="7FO-gp-6y6"/>
                     <connections>
+                        <outlet property="gameNumberLabel" destination="Qf9-SG-97c" id="w9O-mQ-vjP"/>
                         <outlet property="loseButton" destination="o7j-Yt-Fmp" id="Ojq-7x-UQj"/>
                         <outlet property="totalLoseLabel" destination="rgO-Sn-HQk" id="UTX-Lq-E5Q"/>
                         <outlet property="totalWinLabel" destination="qtX-iP-4GS" id="GPC-4U-f6C"/>
