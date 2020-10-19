@@ -9,11 +9,11 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
     var countOfWin = 0
     var countOfLose = 0
-    
-    
+    var countOfGame = 0
+    @IBOutlet weak var gameNumberLabel: UILabel!
     @IBOutlet weak var winButton: UIButton!
     @IBOutlet weak var loseButton: UIButton!
     @IBOutlet weak var totalWinLabel: UILabel!
@@ -31,12 +31,16 @@ class MainViewController: UIViewController {
     @IBAction func pressedWin(_ sender: Any) {
         countOfWin += 1
         totalWinLabel.text = "Total Win: \(countOfWin)"
+        countOfGame += 1
+        gameNumberLabel.text = "Number of Game: \(countOfGame)"
     }
     
     
     @IBAction func pressedLose(_ sender: Any) {
         countOfLose += 1
         totalLoseLabel.text = "Total Lose: \(countOfLose)"
+        countOfGame += 1
+        gameNumberLabel.text = "Number of Game: \(countOfGame)"
     }
     
     /*
